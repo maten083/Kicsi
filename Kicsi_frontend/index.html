@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Kicsi beadandó</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="text_box"><p>Nagy Máté - QQ1XAJ - progmod2 Beadandó - 2022</p></div>
+    <table>
+        <thead>
+        <tr>
+            <th class="column_title">ID</th>
+            <th class="column_title">Task Name</th>
+            <th class="column_title">Progress Status</th>
+            <th class="column_title">Actions</th>
+        </tr>
+        </thead>
+        <tbody id="tasks">
+        </tbody>
+    </table>
+</div>
+<div class="main_container">
+
+    <div class="form_container create">
+        <form>
+
+            <label for="name_create">CREATE</label>
+            <input type="text" id="name_create" name="name" placeholder="The task's name...">
+
+            <input type="button" value="Done" onclick="doCreate()">
+        </form>
+    </div>
+    <div class="form_container update" style="display: none;">
+        <form>
+            <label for="id">UPDATE</label>
+            <input type="hidden" id="id" name="id" placeholder="The ID ...">
+
+            <label for="name">Task name</label>
+            <input type="text" id="name" name="name" placeholder="The task name...">
+
+            <label for="status">Status type</label>
+            <select id="status" name="status">
+                <option value="0">To Do</option>
+                <option value="1">In Progress</option>
+                <option value="2"> Completed!</option>
+            </select>
+            <input type="button" value="Done" onclick="doUpdate()">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
